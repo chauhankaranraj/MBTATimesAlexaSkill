@@ -65,14 +65,30 @@ allSongsUrls = {
 	'sugar how you get so fly': 'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
 	'photograph': 'https://archive.org/download/Photograph_201512/Photograph.ogg',
 	'sweet child of mine': 'https://ia801608.us.archive.org/26/items/GunsNRosesSweetChildOMine_201703/Guns%20N%20Roses%20-%20Sweet%20Child%20O%20Mine.ogg',	
-    'bailando': 'https://archive.org/details/BailandoSpanishVersion'
+    'bailando': 'https://ia800604.us.archive.org/6/items/BailandoSpanishVersion/Bailando%20(Spanish%20Version).ogg',
+    'rude': 'https://archive.org/download/MAGICRude_201606/MAGIC!%20-%20Rude.ogg'
 }
 
 playlists = {
     'chill' : [
+        'https://ia800604.us.archive.org/6/items/BailandoSpanishVersion/Bailando%20(Spanish%20Version).ogg',
+        'https://archive.org/download/MAGICRude_201606/MAGIC!%20-%20Rude.ogg',
+        'https://archive.org/download/OldPop_1728/BackstreetBoys-AsLongAsYouLoveMe.ogg',
         'https://archive.org/download/LuisFonsi_324/LuisFonsi-Despacitoft.DaddyYankee.ogg',
         'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
-        'https://archive.org/details/BailandoSpanishVersion'
+        'https://archive.org/download/BackstreetBoys-IWantItThatWay_969/BackstreetBoys-IWantItThatWay.ogg',
+        'https://archive.org/download/BackstreetBoys_785/BackstreetBoys-Everybody.ogg',
+        'https://archive.org/download/TheChainsmokers/TheChainsmokersFeatHalsey-Closer.ogg',
+        'https://archive.org/download/TheChainsmokersDontLetMeDownFt.Daya/The%20Chainsmokers%20-%20Don\'t%20Let%20Me%20Down%20ft.%20Daya.ogg',
+        'https://archive.org/download/RosesFLAC/The%20Chainsmokers%20Ft%20Rozes%20-%20Roses.ogg'
+    ],
+    'workout': [
+        'https://archive.org/download/BhaagMilkhaBhaagRockVersionBhaagMilkhaBhaagSongsPk.CC/8%20-%20Bhaag%20Milkha%20Bhaag%20(Rock%20Version)%20-%20Bhaag%20Milkha%20Bhaag%20[SongsPk.CC].ogg',
+        'https://archive.org/download/2Pac50CentEminemTillICollapseremix3275/2%20pac-%2050%20cent-%20eminem%20-%20till%20i%20collapse%20(remix)(3)275.ogg',
+        'https://archive.org/download/Starboy/Starboy.ogg',
+        'https://archive.org/download/SmokeAndMirrors_201705/2-20%20Monster%201.ogg',
+        'https://archive.org/download/Monster_201410/Radioactive.ogg',
+        'https://archive.org/download/ImagineDragonsBeliever_201706/Imagine%20Dragons%20-%20Believer.ogg',
     ]
 }
 
