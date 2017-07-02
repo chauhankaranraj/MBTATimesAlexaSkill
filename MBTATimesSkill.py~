@@ -28,8 +28,8 @@ busStopIds = {'kenmore':'929', 'ken more':'929', 'college':'929', 'watertown':'9
 @ask.intent('BusIntent')
 def getBusTimes(busDestination):
 	print('\n\n\nreceived ' + str(busDestination) + '\n\n\n')
-	busTimes = getNextBusTimesApi(stop=busStopIds[str(busDestination).lower()])
-	if len(busTimes)>=2:
+    busTimes = getNextBusTimesApi(stop=busStopIds[str(busDestination).lower()])
+    if len(busTimes)>=2:
         reply = 'The next buses to ' + str(busDestination) + ' are ' + busTimes[0] + ' and ' + busTimes[1]
     elif len(busTimes)==1:
         reply = 'The next bus to ' + str(busDestination) + ' is ' + busTimes[0]
