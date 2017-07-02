@@ -48,11 +48,10 @@ def getNextSubwayTimesScraping(stop, destination):
             try:
                 value = time.contents[0].split()[0] # time.tag might be <li> or '\n'
                 try:
-                    value = int(value)  # checking value in mintues or 'Arriving'
+                    value = int(value)  # checking if value is an int
                     predictions.append(str(value) + ' minutes away')
-                except ValueError as e: # value is 'Arriving'
-                    if value=='Arriving':
-                        predictions.append(value)
+                except ValueError as e: # value is not an int
+                    if value=='Arriving': predictions.append(value)
             except AttributeError as e: # time.tag is not <li> (most often, it is '\n')
                 continue
     
@@ -62,11 +61,10 @@ def getNextSubwayTimesScraping(stop, destination):
             try:
                 value = time.contents[0].split()[0] # time.tag might be <li> or '\n'
                 try:
-                    value = int(value)  # checking value in mintues or 'Arriving'
+                    value = int(value)  # checking if value is an int
                     predictions.append(str(value) + ' minutes away')
-                except ValueError as e: # value is 'Arriving'
-                    if value=='Arriving':
-                        predictions.append(value)
+                except ValueError as e: # value is not an int
+                    if value=='Arriving': predictions.append(value)
             except AttributeError as e: # time.tag is not <li> (most often, it is '\n')
                 continue
 
