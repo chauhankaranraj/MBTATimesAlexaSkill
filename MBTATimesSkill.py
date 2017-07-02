@@ -1,8 +1,9 @@
 import sys
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages')
-from MBTATimesGetter import getNextBusTimesScraping, getNextSubwayTimesScraping, getNextBusTimesApi
 from flask import Flask
 from flask_ask import Ask, statement, question, session, audio
+from MBTATimesGetter import getNextBusTimesScraping, getNextSubwayTimesScraping, getNextBusTimesApi
+import random
 
 
 app = Flask(__name__)
@@ -88,6 +89,7 @@ def playSong(songName):
 def startPlaylist(playlistName):
     global currentPlaylistName
     currentPlaylistName = playlistName
+    random.shuffle(playlists[str(playlistName).lower()])
     return audio('Playing ' + str(playlistName) + ' playlist').play(playlists[str(playlistName).lower()][0])
 
 @ask.on_playback_nearly_finished()
