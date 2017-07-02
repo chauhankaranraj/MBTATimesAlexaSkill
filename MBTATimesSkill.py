@@ -75,9 +75,9 @@ playlists = {
     ]
 }
 
-
 currentPlaylistName = None
 currentSongIndex = 0
+
 
 @ask.intent('StartSongIntent')
 def playSong(songName):
@@ -92,14 +92,15 @@ def startPlaylist(playlistName):
 
 @ask.on_playback_nearly_finished()
 def queueNextSongInPlaylist():
-	global currentPlaylistName
-	global currentSongIndex
+    global currentPlaylistName
+    global currentSongIndex
     if currentSongIndex < len(playlists[str(currentPlaylistName)])-1:
         currentSongIndex += 1
         return audio.enqueue(playlists[currentPlaylistName][currentSongIndex])
 
 @ask.on_playback_finished()
 def notifyIfEndOfPlaylist():
+    global currentSongIndex
     if currentSongIndex == len(playlists[currentPlaylistName])-1:
         return statement('There are no more songs in this playlist!')
 
