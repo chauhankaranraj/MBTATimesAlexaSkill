@@ -59,28 +59,60 @@ def getSubwayTimes(subwayDestination):
 #======================================== Music Player ========================================#
 #==============================================================================================#
 
-songUrls = {
+allSongsUrls = {
 	'despacito': 'https://archive.org/download/LuisFonsi_324/LuisFonsi-Despacitoft.DaddyYankee.ogg',
 	'sugar how you get so fly': 'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
 	'photograph': 'https://archive.org/download/Photograph_201512/Photograph.ogg',
-	'sweet child of mine': 'https://ia801608.us.archive.org/26/items/GunsNRosesSweetChildOMine_201703/Guns%20N%20Roses%20-%20Sweet%20Child%20O%20Mine.ogg'		
+	'sweet child o mine': 'https://ia801608.us.archive.org/26/items/GunsNRosesSweetChildOMine_201703/Guns%20N%20Roses%20-%20Sweet%20Child%20O%20Mine.ogg',	
+    'bailando': 'https://archive.org/details/BailandoSpanishVersion'
 }
 
-@ask.intent('MusicIntent')
+playlists = {
+    'chill' : [
+        'https://archive.org/download/LuisFonsi_324/LuisFonsi-Despacitoft.DaddyYankee.ogg',
+        'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
+        'https://archive.org/details/BailandoSpanishVersion'
+    ]
+}
+
+
+currentPlaylistName = None
+currentSongIndex = 0
+
+@ask.intent('StartSongIntent')
 def playSong(songName):
-	url = songUrls[str(songName).lower()]
+	url = allSongsUrls[str(songName).lower()]
 	return audio('Playing ' + str(songName)).play(url)
 
+@ask.intent('StartPlaylistIntent')
+def startPlaylist(playlistName):
+    global currentPlaylistName
+    currentPlaylistName = playlistName
+    return audio('Playing ' + str(playlistName) + ' playlist').play(playlists[str(playlistName).lower()][0])
+
+@ask.on_playback_nearly_finished()
+def queueNextSongInPlaylist():
+	global currentPlaylistName
+	global currentSongIndex
+    if currentSongIndex < len(playlists[str(currentPlaylistName)])-1:
+        currentSongIndex += 1
+        return audio.enqueue(playlists[currentPlaylistName][currentSongIndex])
+
+@ask.on_playback_finished()
+def notifyIfEndOfPlaylist():
+    if currentSongIndex == len(playlists[currentPlaylistName])-1:
+        return statement('There are no more songs in this playlist!')
+
 @ask.intent('AMAZON.PauseIntent')
-def pausedemo():
+def pausePlayback():
 	return audio.stop()
 
 @ask.intent('AMAZON.ResumeIntent')
-def pausedemo():
+def resumePlayback():
 	return audio.resume()
 
 @ask.intent('AMAZON.StopIntent')
-def pausedemo():
+def stopPlayback():
 	return audio.clear_queue(stop=True)
 
 
