@@ -71,17 +71,16 @@ allSongsUrls = {
 
 playlists = {
     'chill' : [
-        'file:///Users/karanraj/Music/Songs/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(Official%20Lyric%20Video).mp3'
-        # 'https://ia800604.us.archive.org/6/items/BailandoSpanishVersion/Bailando%20(Spanish%20Version).ogg',
-        # 'https://archive.org/download/MAGICRude_201606/MAGIC!%20-%20Rude.ogg',
-        # 'https://archive.org/download/OldPop_1728/BackstreetBoys-AsLongAsYouLoveMe.ogg',
-        # 'https://archive.org/download/LuisFonsi_324/LuisFonsi-Despacitoft.DaddyYankee.ogg',
-        # 'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
-        # 'https://archive.org/download/BackstreetBoys-IWantItThatWay_969/BackstreetBoys-IWantItThatWay.ogg',
-        # 'https://archive.org/download/BackstreetBoys_785/BackstreetBoys-Everybody.ogg',
-        # 'https://archive.org/download/TheChainsmokers/TheChainsmokersFeatHalsey-Closer.ogg',
-        # 'https://archive.org/download/TheChainsmokersDontLetMeDownFt.Daya/The%20Chainsmokers%20-%20Don\'t%20Let%20Me%20Down%20ft.%20Daya.ogg',
-        # 'https://archive.org/download/RosesFLAC/The%20Chainsmokers%20Ft%20Rozes%20-%20Roses.ogg'
+        'https://ia800604.us.archive.org/6/items/BailandoSpanishVersion/Bailando%20(Spanish%20Version).ogg',
+        'https://archive.org/download/MAGICRude_201606/MAGIC!%20-%20Rude.ogg',
+        'https://archive.org/download/OldPop_1728/BackstreetBoys-AsLongAsYouLoveMe.ogg',
+        'https://archive.org/download/LuisFonsi_324/LuisFonsi-Despacitoft.DaddyYankee.ogg',
+        'https://archive.org/download/RobinSchulzSugarfeat.FrancescoYatesOFFICIALMUSICVIDEO_201611/Robin%20Schulz%20-%20Sugar%20(feat.%20Francesco%20Yates)%20(OFFICIAL%20MUSICVIDEO).ogg',
+        'https://archive.org/download/BackstreetBoys-IWantItThatWay_969/BackstreetBoys-IWantItThatWay.ogg',
+        'https://archive.org/download/BackstreetBoys_785/BackstreetBoys-Everybody.ogg',
+        'https://archive.org/download/TheChainsmokers/TheChainsmokersFeatHalsey-Closer.ogg',
+        'https://archive.org/download/TheChainsmokersDontLetMeDownFt.Daya/The%20Chainsmokers%20-%20Don\'t%20Let%20Me%20Down%20ft.%20Daya.ogg',
+        'https://archive.org/download/RosesFLAC/The%20Chainsmokers%20Ft%20Rozes%20-%20Roses.ogg'
     ],
     'workout': [
         'https://archive.org/download/BhaagMilkhaBhaagRockVersionBhaagMilkhaBhaagSongsPk.CC/8%20-%20Bhaag%20Milkha%20Bhaag%20(Rock%20Version)%20-%20Bhaag%20Milkha%20Bhaag%20[SongsPk.CC].ogg',
@@ -90,7 +89,10 @@ playlists = {
         'https://archive.org/download/SmokeAndMirrors_201705/2-20%20Monster%201.ogg',
         'https://archive.org/download/Monster_201410/Radioactive.ogg',
         'https://archive.org/download/ImagineDragonsBeliever_201706/Imagine%20Dragons%20-%20Believer.ogg',
-    ]
+    ],
+    'test': [
+    	'http://www.mp3wale.net/uploads/file/58edca4eec94c.mp3'
+	]	
 }
 
 currentPlaylistName = None
