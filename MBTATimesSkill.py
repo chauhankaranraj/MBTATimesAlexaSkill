@@ -17,7 +17,7 @@ def homepage():
 
 @ask.launch
 def startSkill():
-    startQuestion = 'Do you want to go to Kenmore, Watertown, Park Street, or Boston College?'
+    startQuestion = 'Hi! How can I help you???'
     return question(startQuestion)
 
 #==============================================================================================#
